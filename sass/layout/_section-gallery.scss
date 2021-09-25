@@ -1,0 +1,103 @@
+.buttons-list-portfolio {
+  background-color: var(--secundary-text);
+  padding-top: var(--padding-bottom-94);
+  padding-bottom: var(--padding-bottom-94);
+}
+.portf-buttons {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: var(--padding-bottom-50);
+  @include font(500, 16px, 1.25);
+  color: var(--main-title-color);
+  display: flex;
+  justify-content: center;
+  & > .portf-item-btn:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+.item-btn {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  @include font(500, 16px, 1.6);
+  border: 0;
+  border-radius: var(--border-radius-4);
+  color: var(--main-title-color);
+  background: var(--background-color-cards);
+  border-radius: var(--border-radius-4);
+  transition-property: background-color, box-shadow, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+.group-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--margin-top-30));
+  margin-left: calc(-1 * var(--margin-top-30));
+}
+.group-cards > .card-portf {
+  display: block;
+  flex-basis: var(--flex-calc-cards-gallery);
+  margin-top: var(--margin-top-30);
+  margin-left: var(--margin-left-30);
+  background: var(--card-set-background-color);
+  outline: var(--outline-cards);
+}
+.overlay-callery {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.submenu-card-callery {
+  position: absolute;
+  @include font(400, 18px, 1.5);
+  color: var(--secundary-text);
+  background: var(--background-submenu-gallery);
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(101%);
+  transition: transform 500ms linear;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  .container-card-gallery:hover &,
+  .container-card-gallery:focus & {
+    transform: translateY(0);
+  }
+}
+.container-card-gallery {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-card-gallery);
+  }
+}
+.card-text-gal {
+  background: var(--secundary-text);
+  padding-top: var(--card-text-gal-pad-top);
+  padding-right: var(--card-text-gal-pad-lft);
+  padding-bottom: var(--card-text-gal-pad-top);
+  padding-left: var(--card-text-gal-pad-lft);
+}
+.gallery {
+  @include font(700, 18px, 2, 0.06em);
+  color: var(--main-title-color);
+}
+.p-gallery {
+  margin-top: 4px;
+  @include font(400, 16px, 2.2);
+  color: var(--main-text-color);
+}
+.default {
+  color: var(--secundary-text);
+  background-color: var(--accent-color);
+}

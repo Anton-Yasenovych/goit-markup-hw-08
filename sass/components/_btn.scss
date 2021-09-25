@@ -1,0 +1,35 @@
+.main-button {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--margin-top-30);
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--padg-main-btn);
+  width: 200px;
+  box-shadow: var(--box-shadow);
+  font-style: normal;
+  @include font(700, 16px, 1.9, 0.06em);
+  border: 0;
+  color: var(--secundary-text);
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius-4);
+  transition-property: background-color, box-shadow, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: var(--background-color-hover-btn-hero);
+    box-shadow: var(--box-shadow);
+    color: var(--secundary-text);
+  }
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--background-color-hover-btn-hero);
+  box-shadow: var(--box-shadow);
+  color: var(--secundary-text);
+}

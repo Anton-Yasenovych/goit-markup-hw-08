@@ -1,0 +1,7 @@
+.title {
+  box-sizing: inherit;
+  margin-bottom: 50px;
+  @include font(700, 36px, 1.2);
+  text-align: center;
+  color: var(--main-title-color);
+}

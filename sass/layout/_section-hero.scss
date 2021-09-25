@@ -1,0 +1,19 @@
+.hero {
+  padding-top: var(--padding-hero);
+  padding-bottom: var(--padding-hero);
+  background-image: var(--background-image-hero),
+    url(../images/hero/hero-min.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(d);
+}
+.hero-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: var(--font-size-44);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--secundary-text);
+}

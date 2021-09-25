@@ -1,0 +1,33 @@
+.social-networks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-color-icon-card-team);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.icon-team {
+  fill: var(--fill-icon);
+  justify-content: space-evenly;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  .link:hover &,
+  .link:focus & {
+    fill: var(--card-set-background-color);
+  }
+}
