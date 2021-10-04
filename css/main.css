@@ -949,7 +949,7 @@ img {
     padding-bottom: 118px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("../../images/hero/hero-mobile-x1.jpg x1, hero-mobile-x2.jpg x2");
+    background-image: var(--background-image-hero), url("/images/hero/hero-mobile@x1.jpg, hero-mobile@x2.jpg");
   }
 }
 
@@ -959,7 +959,7 @@ img {
     padding-bottom: 118px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("../../images/hero/hero-mobile-x1.jpg x1, hero-mobile-x2.jpg x2");
+    background-image: var(--background-image-hero), url("/images/hero/hero-mobile@x1.jpg, hero-mobile@x2.jpg");
   }
 }
 
@@ -969,7 +969,7 @@ img {
     padding-bottom: 118px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("../../images/hero/hero-tablet-x1.jpg x1, hero-tablet-x2.jpg x2");
+    background-image: var(--background-image-hero), url("/images/hero/hero-tablet@x1.jpg, hero-tablet@x2.jpg");
   }
 }
 
@@ -979,7 +979,7 @@ img {
     padding-bottom: 200px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("/images/hero/hero-descopt-x1 x1.jpg, hero-descopt-x2.jpg x2");
+    background-image: var(--background-image-hero), url("/images/hero/hero-descopt@x1.jpg, hero-descopt@x2.jpg");
   }
 }
 
