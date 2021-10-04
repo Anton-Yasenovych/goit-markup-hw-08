@@ -1,21 +1,33 @@
-.buttons-list-portfolio {
+
+.section-gallery {
   background-color: var(--secundary-text);
-  padding-top: var(--padding-bottom-94);
-  padding-bottom: var(--padding-bottom-94);
+  display: block;
 }
-.portf-buttons {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: var(--padding-bottom-50);
+.gallery-list-buttons {
+  display: flex;
   @include font(500, 16px, 1.25);
   color: var(--main-title-color);
-  display: flex;
-  justify-content: center;
-  & > .portf-item-btn:not(:first-child) {
-    margin-left: 8px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    & > .gallery-item-button {
+      margin-bottom: 15px;
+    }
+    margin-right: - 8px;
+    margin-bottom:  40px;
   }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: var(--padding-bottom-50);
+    margin-right: auto;
+    margin-left: auto;
+   }
+  @media screen and (min-width: 1200px) {
+  } 
+  & > .gallery-item-button:not(:last-child) {
+    margin-right: 8px;}
 }
-.item-btn {
+
+.gallery-list__button {
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -30,26 +42,57 @@
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
-.group-cards {
+
+.gallery-list-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--margin-top-30));
-  margin-left: calc(-1 * var(--margin-top-30));
-}
-.group-cards > .card-portf {
-  display: block;
-  flex-basis: var(--flex-calc-cards-gallery);
-  margin-top: var(--margin-top-30);
-  margin-left: var(--margin-left-30);
+  @media screen and (min-width: 320px) {
+    display: block;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -30px;
+      margin-left: -30px;
+  }  
+ & > .gallery-item-card {
+  width: 100%;
   background: var(--card-set-background-color);
   outline: var(--outline-cards);
+  @media screen and (min-width: 320px){
+    display: block;
+    margin-top: 30px;
+   }
+   @media screen and (min-width: 480px){
+    display: block;
+    margin-top: 30px;
+   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;      
+   }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+   }}
 }
+
 .overlay-callery {
   display: block;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
-.submenu-card-callery {
+
+.callery-link-img {
+  width: 100%;
+  display: block;
+  align-self: center;
+}
+
+.gallery-cards__submenu {
   position: absolute;
   @include font(400, 18px, 1.5);
   color: var(--secundary-text);
@@ -66,13 +109,18 @@
   transition: transform 500ms linear;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-  .container-card-gallery:hover &,
-  .container-card-gallery:focus & {
+  .gallery-card-set:hover &,
+  .gallery-card-set:focus & {
     transform: translateY(0);
   }
 }
-.container-card-gallery {
+
+.gallery-card-set {
+  width: 404px;
   display: block;
+  align-items: center;
+  align-self: center;
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -81,23 +129,28 @@
     box-shadow: var(--box-shadow-card-gallery);
   }
 }
-.card-text-gal {
+
+.gallery-card__label {
   background: var(--secundary-text);
   padding-top: var(--card-text-gal-pad-top);
   padding-right: var(--card-text-gal-pad-lft);
   padding-bottom: var(--card-text-gal-pad-top);
   padding-left: var(--card-text-gal-pad-lft);
 }
-.gallery {
+
+.title-card {
   @include font(700, 18px, 2, 0.06em);
   color: var(--main-title-color);
 }
-.p-gallery {
+
+.description-card {
   margin-top: 4px;
   @include font(400, 16px, 2.2);
   color: var(--main-text-color);
 }
+
 .default {
   color: var(--secundary-text);
   background-color: var(--accent-color);
 }
+

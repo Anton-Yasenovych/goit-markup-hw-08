@@ -4,3 +4,9 @@
   line-height: $fheight;
   letter-spacing: $fspasing;
 }
+@mixin padding($padng-t: 0px, $padng-b: 0px, $padng-r: 0px, $padng-l: 0px) {
+  padding-top: $padng-t;
+  padding-bottom: $padng-b;
+  padding-right: $padng-r;
+  padding-left: $padng-l;
+}

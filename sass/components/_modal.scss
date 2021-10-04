@@ -1,19 +1,41 @@
+
 .modal {
   cursor: auto;
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 581px;
-  min-width: 528;
+  position: relative;
   padding: 40px;
   background: var(--card-set-background-color);
   box-shadow: var(--box-shadow-card-team);
   border-radius: var(--border-radius-4);
+      @media (max-width: 319px){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 768px;
+      }  
+      @media (min-width: 767px){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 769px;
+      }
+      @media (min-width: 1025px){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1025px;
+      }  
+      @media screen and (min-width: 320px) {}
+      @media screen and (min-width: 480px) {}
+      @media screen and (min-width: 768px) {}
+      @media screen and (min-width: 1024px) {}     
 }
-.modal__close {
-  display: flex;
+  
+.modal__button-close {
+  display: flex; 
   justify-content: center;
   position: absolute;
   top: 8px;
@@ -25,36 +47,50 @@
   border: var(--border-icon);
   cursor: pointer;
 }
-.icon-close-modal {
+
+.button-close__icon {
   display: block;
   align-self: center;
   width: 18px;
   height: 18px;
-  .modal__close:hover &,
-  .modal__close:focus & {
+  .modal__button-close:hover &,
+  .modal__button-close:focus & {
     fill: var(--accent-color);
-  }
+  } 
 }
+
 .modal__title {
   font-style: normal;
-  @include font(700, 20px, 1.15);
+  @include font(700, 20px, 1.5);
   text-align: center;
   color: var(--main-title-color);
   margin-bottom: 12px;
-}
-.form__label {
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1024px) {}
+} 
+
+.modal-form__label {
   display: block;
   position: relative;
   font-style: normal;
   @include font(400, 12px, 1.2, 0.01em);
   color: var(--main-text-color);
   margin-bottom: 10px;
-}
-.container-for-modals-icon {
-  display: block;
-  position: relative;
-}
-.icon-input-modal {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  &:focus-within, &:hover {
+    color: var(--accent-color);
+  }
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1024px) {}
+} 
+
+.modal-form__icon {
   position: absolute;
   display: inline-block;
   z-index: 1;
@@ -63,16 +99,22 @@
   width: 18px;
   height: 18px;
   fill: var(--fill-modals-icons);
-  .modal-label:focus-within & {
+  .modal-form__label:focus-within & {
     border-color: var(--accent-color);
     fill: var(--accent-color);
   }
-  .form-input:hover & {
+  .modal-form__label:hover & {
     border-color: var(--accent-color);
     fill: var(--accent-color);
   }
 }
-.modal-input {
+
+.modal-form__container-input {
+  display: block;
+  position: relative;
+}
+
+.modal-form__input {
   display: block;
   width: 100%;
   border: var(--mod-border-input);
@@ -91,12 +133,18 @@
   &:focus {
     border-color: var(--accent-color);
     fill: var(--accent-color);
-  }
 }
-.form-textarea {
+@media screen and (min-width: 320px) {}
+@media screen and (min-width: 480px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1024px) {}
+}
+
+.modal-form__textarea {
   margin-bottom: 20px;
 }
-.input-modal-textarea {
+
+.form-textarea-input {
   display: block;
   min-width: 100%;
   min-height: 120px;
@@ -109,35 +157,40 @@
   padding-bottom: 12px;
   padding-left: var(--font-size-16);
   cursor: pointer;
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1024px) {}
 }
-.modal-label-check {
+
+.modal-form__label-check {
   display: block;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-icon);
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1024px) {}
 }
-.modal-container-input {
-  display: flex;
+
+.label-checkbox-container {
+  display: inline-flex;
   justify-content: center;
   width: 100%;
+
 }
-.modal-input-checkbox {
+
+.modal-form__checkbox-hidden {
   position: absolute;
   left: 40px;
   bottom: 140px;
 }
-.agreement {
-  display: block;
-}
-.modal-link-agreement {
+
+.modal-form__checkbox-icon {
   display: inline-block;
-  text-decoration: underline;
-  color: var(--accent-color);
-  margin-left: 0.3rem;
-}
-.icon-checkbox {
-  display: inline-block;
-  margin-right: 8.38px;
+  margin-right: 8px;
+  margin-left: 0;
   align-self: center;
   border: var(--chexbox-border);
   border-radius: 2px;
@@ -146,21 +199,45 @@
   background-color: inherit;
   transition-property: border-color, background-image;
   cursor: pointer;
+    &:hover {
+      border-color: var(--accent-color);
+    }
+    .modal-form__checkbox-hidden:checked + & {
+        display: inline-flex;
+        margin-right: 8px;
+        width: 16px;
+        height: 15px;
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        background-image: url('data:image/svg+xml,%3Csvg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="16" height="15" rx="2" fill="%232196F3"/%3E%3Cpath d="m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="%23fff" stroke="%23fff" stroke-width=".2"/%3E%3C/svg%3E');
+        block-size: contain;
+        background-origin: border-box;
+        border-radius: 2px;
+        border: transparent;
+      }
+     
+} 
+.checkbox-container-text {
+  @include font(400, 12px, 1.16);
+color: var(--main-text-color);
+margin-right: 0.3em;
+}
+.modal-form__link {
+  display: inline-block;
+  text-decoration: underline;
+  @include font(400, 12px, 1.16);
+  color: var(--accent-color);
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
+    text-decoration: none;
   }
-  .modal-input-checkbox:checked + & {
-    display: block;
-    margin-right: 8.38px;
-    width: 16px;
-    height: 15px;
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-    background-image: url('data:image/svg+xml,%3Csvg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="16" height="15" rx="2" fill="%232196F3"/%3E%3Cpath d="m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="%23fff" stroke="%23fff" stroke-width=".2"/%3E%3C/svg%3E');
-    block-size: contain;
-    background-origin: border-box;
-    border-radius: 2px;
-    border: transparent;
-  }
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1024px) {}
 }
+.modal__button-submit {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+} 

@@ -1,7 +1,6 @@
 .logo {
+  display: inline-flex;
   font-family: "Raleway", sans-serif;
-  @include font(700, 26px, 1.1);
+  @include font(700, 24px, 1.2);
   color: var(--black-color);
-  padding-top: var(--padding-top-24);
-  padding-bottom: var(--padding-bottom-25);
 }

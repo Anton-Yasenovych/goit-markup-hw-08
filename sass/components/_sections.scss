@@ -1,5 +1,8 @@
+
 .sections {
   background-color: var(--secundary-text);
-  padding-top: var(--padg-t-main-text);
-  padding-bottom: var(--padg-b-main-text);
+  @include padding(60px, 60px, 0, 0);
+  @media screen and (min-width: 1200px) {
+    @include padding(94px, 94px, 0, 0);
+  }
 }

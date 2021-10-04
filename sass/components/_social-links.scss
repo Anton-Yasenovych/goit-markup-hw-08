@@ -1,10 +1,17 @@
+
 .social-networks {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+    width: 206px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-network__item:not(:first-child) {
+  margin-left: 10px;
 }
 .link-icon {
-  display: flex;
+  display: flex;   
   justify-content: center;
   align-items: center;
   width: 44px;
@@ -14,11 +21,22 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+  &:active {
+  background-color: var(--background-main-button);
+  }
+  @media screen and (max-width: 1199px) {
+  &:hover,
+  &:focus {
+    background-color: none;
+  }
+  }
+  @media screen and (min-width: 1200px) {
   &:hover,
   &:focus {
     background-color: var(--accent-color);
-  }
+  }}
 }
+
 .icon-team {
   fill: var(--fill-icon);
   justify-content: space-evenly;
@@ -26,8 +44,11 @@
   vertical-align: middle;
   width: 20px;
   height: 20px;
+  @media screen and (min-width: 1200px) {
   .link:hover &,
   .link:focus & {
     fill: var(--card-set-background-color);
   }
+  }  
 }
+

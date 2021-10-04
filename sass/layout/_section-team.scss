@@ -1,41 +1,93 @@
+
 .section-team {
   background: var(--background-color-cards);
 }
-.section-team__list {
-  display: flex;
-  flex-direction: row;
-  margin-top: -30px;
-  margin-left: -30px;
-  & > .team-card {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-top: var(--margin-top-30);
-    margin-left: var(--margin-left-30);
+.team-list {
+  @media screen and (min-width: 320px) {
+    display: block;
+    align-items: center;
   }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -30px;
+      margin-left: -30px;
+      } 
+  }
+
+.team-list__item-card {
+  width: 100%;
+  @media screen and (min-width: 320px){
+    display: block;
+    margin-top: 30px;
+   }
+   @media screen and (min-width: 480px){
+    display: block;
+    margin-top: 30px;
+   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;      
+   }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+   }
 }
-.team-card {
+
+.team-list__item-card {
   .card-set {
+    display: block;
+    align-items: center;
+    width: 100%;
     background-color: var(--card-set-background-color);
     box-shadow: var(--box-shadow-card-team);
     border-radius: var(--border-radius-card-team);
   }
 }
-.card-text {
-  padding-top: var(--padding-top-30);
-  padding-bottom: var(--padding-bottom-30);
-  padding-top: var(--padding-top-30);
-  padding-left: 32px;
-  padding-bottom: 30px;
-  padding-right: 32px;
+.card-set__thumb {
+  display: block;
+  align-items: center;
+  height: auto;
+  width: 100%;
 }
-.title-name {
+.card-set__img {
+  display: block;
+  width: 100%;
+}
+.card-set__container-text {
+  align-items: center;
+  display: block;
+@media screen and (max-width:1199px){
+  padding-top: 30px;
+  padding-left: auto;
+  padding-bottom: 24px;
+  padding-right: auto;
+}
+  @media screen and (min-width:1200px){
+  padding-top: 30px;
+  padding-left: auto;
+  padding-bottom: 30px;
+  padding-right: auto;
+}}
+
+.card-set__title-name {
+  display: block;
   text-align: center;
-  @include font(500, 16px, 1.2);
   color: var(--main-title-color);
   margin-bottom: 10px;
+  @include font (500, 16px, 1.2);
 }
-.position {
-  margin-bottom: 16px;
+
+
+.label-position {
+  display: block;
   text-align: center;
-  @include font(400, 16px, 1.2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  @include font (400, 16px, 1.2);
   color: var(--main-text-color);
 }
+

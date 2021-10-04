@@ -1,7 +1,22 @@
+
 .title {
   box-sizing: inherit;
-  margin-bottom: 50px;
-  @include font(700, 36px, 1.2);
   text-align: center;
   color: var(--main-title-color);
+  @media screen and (min-width: 320px) {
+    @include font(700, 28px, 1.2);
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 480px){
+    @include font(700, 28px, 1.2);
+    margin-bottom: 30px;
+    }
+  @media screen and (min-width: 768px) {
+    @include font(700, 28px, 1.2);
+    margin-bottom: 30px;
+   }
+  @media screen and (min-width: 1200px) {
+    @include font(700, 36px, 1.2);
+    margin-bottom: 50px;
+} 
 }
