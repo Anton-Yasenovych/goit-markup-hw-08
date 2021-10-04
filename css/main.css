@@ -979,7 +979,7 @@ img {
     padding-bottom: 200px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("../../images/hero/hero-descopt-x1.jpg, hero-descopt-x2.jpg");
+    background-image: var(--background-image-hero), url("/images/hero/hero-descopt-x1.jpg, hero-descopt-x2.jpg");
   }
 }
 
