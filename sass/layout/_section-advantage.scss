@@ -12,11 +12,12 @@ display: block;
 }
 
 .advantages-list__item {
-  width: 100%;
+  max-width: 100%;
   display: block; 
   background: var(--card-set-background-color);
-   @media screen and (min-width: 480px){
+   @media screen and (min-width: 767px){
 display: block;
+margin-top: 30px;
     }
   @media screen and (min-width: 768px) {
       flex-basis: calc(100% / 2 - 30px);
@@ -27,6 +28,7 @@ display: block;
         flex-basis: calc(100% / 4 - 30px);
     }
   }
+
 .advantages__container-item { 
   display: block;
   } 
@@ -35,7 +37,7 @@ display: block;
  background-color: var(--background-color-cards);
  display: flex;
  justify-content: center;
- width: 100%;
+ max-width: 100%;
  height: 120px;
  border: 0;
  border-radius: var(--border-radius-4);
@@ -53,15 +55,21 @@ display: block;
   color: var( --main-title-color);
   margin-top: 30px;
   @include font (700, 14px, 1.1);
+  @media screen and (max-width: 319px) {
+    margin-top: 15px;
+    @include font (700, 10px, 1.1);
+  }
 }
 .advantages-text {
   margin-top: var(--margin-top-10);
-  color: var(--main-text-color); 
-  @media screen and (min-width: 320px) {
-    @include font(400, 9px, 1.7);
+  color: var(--main-text-color);
+  @include font(400, 14px, 1.7); 
+  @media screen and (max-width: 319px) {
+    @include font(400, 10px, 1.7);
+    margin-bottom: 15px;
   }
-  @media screen and (min-width: 480px) {
-    @include font(400, 14px, 1.7);
+  @media screen and (max-width: 767px) {
+    &:last-child { margin-bottom: 30px;} 
   }
 }
 

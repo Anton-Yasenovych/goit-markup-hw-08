@@ -1,32 +1,31 @@
 
  .hero {
-  background-image: var(--background-image-hero), url('../images/hero/hero-tablet@x1.jpg');
+  background-image: var(--background-image-hero), url('../../images/hero/mobile@x1.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; 
   background-color: var(d);
   max-width: 100%;
-
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-      background-image: url('../images/hero/hero-tablet@x1.jpg');
+      background-image: var(--background-image-hero), url('../images/hero/descopt@x1.jpg');
     } 
-  @media screen and (min-width: 320px) {
-    @include padding(118px, 118px, 0);
-    background-image: var(--background-image-hero), url('../images/hero/hero-mobile@x1.jpg, hero-mobile@x2.jpg');
+  @media screen and (max-width: 479px) {
+    @include padding(10vw, 10vw, 0);
+    background-image: var(--background-image-hero), url('../images/hero/mobile@x1.jpg'), url('../images/hero/mobile@x2.jpg');
   }
   @media screen and (min-width: 480px) {
     @include padding(118px, 118px, 0);
-    background-image: var(--background-image-hero), url('../images/hero/hero-mobile@x1.jpg, hero-mobile@x2.jpg');
+    background-image: var(--background-image-hero), url('../images/hero/mobile@x1.jpg'), url('../images/hero/mobile@x2.jpg');
   }
   @media screen and (min-width: 768px) {
     @include padding(118px, 118px, 0);
-    background-image: var(--background-image-hero), url('../images/hero/hero-tablet@x1.jpg, hero-tablet@x2.jpg');
+    background-image: var(--background-image-hero), url('../images/hero/tablet@x1.jpg'), url('../images/hero/tablet@x2.jpg');
   }
   @media screen and (min-width: 1200px) {
     @include padding(200px, 200px, 0);
-    background-image: var(--background-image-hero), url('../images/hero/hero-descopt@x1.jpg, hero-descopt@x2.jpg');
+    background-image: var(--background-image-hero), url('../../images/hero/descopt@x1.jpg'), url('../../images/hero/descopt@x2.jpg');
   }}
 
 .hero__title {
@@ -37,6 +36,9 @@
   text-transform: uppercase;
   color: var(--secundary-text);
   margin-bottom: 30px; 
+  @media screen and (max-width: 319px) {
+    @include font (900, 6vw, 1.6, 0.06em);
+  }
   @media screen and (min-width: 320px) {
     @include font (900, 21px, 1.6, 0.06em);
   }

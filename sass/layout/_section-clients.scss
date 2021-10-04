@@ -13,7 +13,11 @@
       } 
 }
 .clients-list__item {
-  width: 100%;
+  max-width: 100%;
+  @media screen and (max-width: 319px){
+    display: block;
+    margin-top: 15px;
+   }
   @media screen and (min-width: 320px){
     display: block;
     margin-top: 30px;
