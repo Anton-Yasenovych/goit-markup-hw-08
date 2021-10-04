@@ -934,11 +934,12 @@ img {
   background-position: center;
   background-size: cover;
   background-color: var(d);
+  max-width: 100%;
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero/hero-mobile-x2.jpg, hero-tablet-x2.jpg, hero-descopt-x2.jpg");
+    background-image: url("../images/hero/hero-mobile-x2.jpg, hero-tablet-x2.jpg; hero-descopt-x2.jpg");
   }
 }
 
@@ -948,7 +949,7 @@ img {
     padding-bottom: 118px;
     padding-right: 0;
     padding-left: 0px;
-    background-image: var(--background-image-hero), url("../images/hero/hero-descopt-x1.jpg x1, hero-descopt-x2.jpg x2");
+    background-image: var(--background-image-hero), url("/images/hero-mobile");
   }
 }
 
