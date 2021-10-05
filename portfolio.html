@@ -16,47 +16,65 @@
 </head>
 
 <body>
-    <header class="header header-gallery">
+    <header class="header header-main">
         <div class="header-container">
-            <nav class="header__navigator">
-                <a href="./index.html" class="navigator__logo logo link"><span class="accent">Web</span>Studio
-                </a>
-                <button class="menu-button">
-                    <svg width="40" height="40" aria-label="переключатель мобильного меню">
-                        <use href="./images/sprite/symbol-defs-optimize.svg#icon-menu"></use>
-                        <use href="./images/sprite/symbol-defs-optimize.svg#icon-close"></use>
-                    </svg>
-                </button>
-
-                <ul class="navigator__menu">
-                    <li class="menu-item list"><a href="./index.html" class="menu-link menu list link">Студия</a>
-                    </li>
-                    <li class="menu-item list"><a href="./portfolio.html"
-                            class="menu-link menu list link current">Портфолио</a>
-                    </li>
-                    <li class="menu-item list"><a href="" class="menu-link menu list link">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="header__contacts">
-                <li class="contacts-email list"><a href=" mailto:exampe@gmai.com"
-                        class="email-link contacts-link link list">
-                        <div class="envelope contacts-icon"><svg class="icons icons-header icon-envelope" width="16"
-                                height="12">
-                                <use href="./images/sprite/symbol-defs-optimize.svg#icon-envelope">
-                                </use>
-                            </svg></div>exampe@gmai.com
-                    </a></li>
-                <li class="header__tel list"><a href="+380687131111" class="header-href contacts-link list link">
-                        <div class="smartphone contacts-icon"><svg class="icons icons-header link icon-smartphone"
-                                width="16" height="12">
-                                <use href="./images/sprite/symbol-defs-optimize.svg#icon-smartphone">
-                                </use>
-                            </svg></div>+380687131111
+        
+            <div class="header-navigator-container">
+                    <a href="./index.html" class="navigator__logo logo link">
+                        <span class="accent">Web</span>Studio
                     </a>
-                </li>
-            </ul>
+                <nav class="header__navigator">
+                  <button
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <svg class="button-menu-icons"
+                            width="40"
+                            height="40" 
+                            aria-label="переключатель мобильного меню">
+                                <use class="icon-menu" href="./images/sprite/symbol-defs-optimize.svg#icon-mobile-menu"></use>
+                            </svg></button>
+          
+                    <ul class="navigator__menu">
+                          <li class="navigator-menu__item list"><a href="./index.html"
+                              class="header-menu__link list link">Студия</a>
+                          </li>
+                              <li class="navigator-menu__item list link current"><a href="./portfolio.html"
+                              class="header-menu__link list link ">Портфолио</a>
+                          </li>
+                          <li class="navigator-menu__item list"><a href="" class="header-menu__link menu list link">Контакты</a>
+                          </li>
+                      </ul>
+                    </nav>
+                                                    <!--box contacts-->
+                     <div class="header-box-contacts">
+                        <ul class="header__contacts">
+                            <li class="header-contacts-item header-email list">
+                                <a href=" mailto:exampe@gmai.com"
+                            class="header__email-link link list">
+                            <div class="envelope contacts-icon">
+                                <svg class="icons link icon-envelope" width=" 14" heidht="10">
+                                   <use href="./images/sprite/symbol-defs-optimize.svg#icon-envelope">
+                                   </use>
+                               </svg></div>exampe@gmai.com
+                               </a>
+                             </li> 
+                             <li class="header-contacts-item header__tel list">
+                                 <a href="+380687131111" class="header__tel-link contacts-link list link">
+                               <div class="smartphone contacts-icon">
+                                   <svg class="icons link icon-smartphone" width=" 10" heidht="14">
+                                   <use href="./images/sprite/symbol-defs-optimize.svg#icon-smartphone">
+                                   </use>
+                               </svg></div>+380687131111</a>
+                             </li>
+                            </ul>
+                           
+    
+                     </div>
+                      
+            </div>
         </div>
-    </header> 
+     </header>
 
     <main>
         <section class="section-gallery sections">
@@ -320,6 +338,64 @@
        </div>
 
    </footer>
+                              <!--mobile-menu-overlay-->
+                              <div class="overlay-container js-menu-container" id="mobile-menu">
+                                <button class="menu-toggle js-close-menu">
+                                  <svg
+                                    class="button-menu-icons"
+                                    width="40"
+                                    height="40" 
+                                    aria-label="переключатель мобильного меню">
+                                        <use class="icon-close"href="./images/sprite/symbol-defs-optimize.svg#icon-close-mobile-menu"></use>
+                                  </svg>
+                                </button>
+                          
+                                <ul class="menu-nav-list">
+                                  <li class="menu-nav__item list">
+                                    <a href="./index.html"
+                                      class="menu-nav__link list link">Студия</a>
+                                  </li> 
+                                  <li class="menu-nav__item list">
+                                    <a href="./portfolio.html"
+                                      class="menu-nav__link list link current">Портфолио</a>
+                                  </li>
+                                   <li class="menu-nav__item list"> 
+                                    <a href="" class="menu-nav__link menu link">Контакты</a>
+                                </li>
+                                </ul>
+                            
+                                <div class="menu-contacts-list">
+                                    <ul class="overlay-list-mobile-menu">
+                                        <li class="mobile-menu__item list">
+                                            <a href="+380687131111" class="mobile-menu__link menu__link-email list link">+380687131111</a>
+                                        </li>
+                                        <li class="mobile-menu__item list">
+                                            <a href=" mailto:exampe@gmai.com"
+                                            class="mobile-menu__link list link">exampe@gmai.com</a>
+                                         </li> 
+                                    </ul>
+                        
+                                    <ul class="overlay-list-social">
+                                         <li class="list-social__item link list"><a href="" class="list-social__link link">Instagram</a></li><span class="devil">|</span>
+                                         <li class="list-social__item link list"><a href="" class="list-social__link link">Twitter</a></li><span class="devil">|</span>
+                                         <li class="list-social__item link list"><a href="" class="list-social__link link">Facebook</a></li><span class="devil">|</span>
+                                         <li class="list-social__item link list"><a href="" class="list-social__link link">LinkedIn</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                            </div>
+                            
+                            <script
+                            defer
+                            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+                            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+                            crossorigin="anonymous"
+                          ></script>
+                        
+                            <script src="js/mobile-menu.js"></script>
+                            <script src="./js/modal.js"></script>
+
+
 </body>
 
 </html>
