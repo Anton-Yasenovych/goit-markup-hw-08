@@ -614,6 +614,12 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header-navigator-container {
+    position: none;
+  }
+}
+
 .header-container-logo-nav {
   display: flex;
 }
@@ -950,7 +956,7 @@ img {
 }
 
 .hero {
-  background-image: var(--background-image-hero), url("../images/hero/tablet@x1.jpg");
+  background-image: var(--background-image-hero), url("../images/hero/descopt@x1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1005,8 +1011,10 @@ img {
     padding-bottom: 118px;
     padding-right: 0;
     padding-left: 0px;
+    display: block;
     max-width: 768px;
-    background-image: var(--background-image-hero), url("../images/hero/tablet@x1.jpg"), url("../images/hero/tablet@x21.jpg");
+    height: auto;
+    background-image: var(--background-image-hero), url("../images/hero/tablet@x1.jpg"), url("../images/hero/tablet@x2.jpg");
   }
 }
 

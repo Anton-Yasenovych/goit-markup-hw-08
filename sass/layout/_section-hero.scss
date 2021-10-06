@@ -1,6 +1,6 @@
 
  .hero {
-  background-image: var(--background-image-hero), url('../images/hero/tablet@x1.jpg');
+  background-image: var(--background-image-hero), url('../images/hero/descopt@x1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
@@ -30,8 +30,11 @@
   }
   @media screen and (min-width: 768px) {
     @include padding(118px, 118px, 0);
-    max-width: 768px;
-    background-image: var(--background-image-hero), url('../images/hero/tablet@x1.jpg'), url('../images/hero/tablet@x21.jpg');
+    
+    display: block; 
+  max-width: 768px;
+  height: auto;
+    background-image: var(--background-image-hero), url('../images/hero/tablet@x1.jpg'), url('../images/hero/tablet@x2.jpg');
   }
   @media screen and (min-width: 1200px) {
     @include padding(200px, 200px, 0);
