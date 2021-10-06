@@ -1,5 +1,5 @@
 
-  
+  menu-toggle
   .header-container {
     box-shadow: var(--filter-drop-shadows)
   }
@@ -21,11 +21,7 @@
       display: none;
     }
   }
-  
-  .navigator__menu .link {
-   
-  }
-  
+ 
   .menu .link:hover,
   .menu .link:focus {
     text-decoration: underline;
@@ -47,9 +43,37 @@
     @media (min-width: 768px) {
         display: none;
       }
-  } 
+  }   
   
+  .menu-toggle-cross {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    min-height: 40px;
+    min-width: 40px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secundary-text);
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    @media (min-width: 768px) {
+        display: none;
+      }
+  }
 
+  .icon-close-mobile-menu {
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  
+  }
+  
   .menu-toggle:hover,
   .menu-toggle:focus {
     fill: var(--accent-color);
@@ -163,8 +187,9 @@ bottom: 40px;
   margin-right: 10px;
   }
  
-
-
+.current-mobile {
+  color: var(--accent-color);
+}
 
 
 

@@ -5,26 +5,38 @@
   background-position: center;
   background-size: cover; 
   background-color: var(d);
-  max-width: 100%;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
       background-image: var(--background-image-hero), url('../images/hero/descopt@x1.jpg');
     } 
-  @media screen and (max-width: 479px) {
-    @include padding(10vw, 10vw, 0);
+  @media screen and (max-width: 319px) {
+    @include padding(118px, 118px, 0);
+    max-width: 480px;
+    background-image: var(--background-image-hero), url('../images/hero/mobile@x1.jpg'), url('../images/hero/mobile@x2.jpg');
+  }
+  @media screen and (min-width: 320px) {
+    @include padding(118px, 118px, 0);
+    max-width: 480px;
     background-image: var(--background-image-hero), url('../images/hero/mobile@x1.jpg'), url('../images/hero/mobile@x2.jpg');
   }
   @media screen and (min-width: 480px) {
     @include padding(118px, 118px, 0);
+    max-width: 480px;
     background-image: var(--background-image-hero), url('../images/hero/mobile@x1.jpg'), url('../images/hero/mobile@x2.jpg');
   }
   @media screen and (min-width: 768px) {
     @include padding(118px, 118px, 0);
+    max-width: 768px;
     background-image: var(--background-image-hero), url('../images/hero/tablet@x1.jpg'), url('../images/hero/tablet@x2.jpg');
   }
   @media screen and (min-width: 1200px) {
     @include padding(200px, 200px, 0);
+    max-width: 1600px;
+  
     background-image: var(--background-image-hero), url('../images/hero/descopt@x1.jpg'), url('../images/hero/descopt@x2.jpg');
   }}
 

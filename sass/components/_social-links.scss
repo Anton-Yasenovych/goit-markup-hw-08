@@ -24,13 +24,13 @@
   &:active {
   background-color: var(--background-main-button);
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
   &:hover,
   &:focus {
     background-color: none;
   }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -44,7 +44,7 @@
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
   .link:hover &,
   .link:focus & {
     fill: var(--card-set-background-color);

@@ -3,16 +3,39 @@
   background-color: var(--background-footer);
 }
 .main-footer-container {
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 320px) {
     display: block;
     align-items: center;
   }
   @media screen and (min-width: 1200px) {
+    max-width: 1200px;
     display: flex;
     align-items: baseline;  
   }
 }
+.footer-container-adress-social {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  
+    justify-content: space-around;
+    align-items: baseline;    
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: 0;
+  }
+}
 
+.footer-container-logo-adress {
+  @media screen and (max-width: 767px){
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px){
+    display: inline-block;
+  }
+  
+}
 .footer__address {
   display: block;
   @media screen and (max-width: 1199px) {
@@ -41,16 +64,14 @@
 }
 
 .footer-adress__list {
-  @media screen and (max-width: 1199px) {
-  display: block;
-  align-items: center;
-}}
-
-.footer-adress__list {
   .footer-adress__item {
     &:not(:first-child) {
       margin-top: var(--margin-t-footer-cont-9);
     }
+  }
+  @media screen and (max-width: 1199px) {
+    display: block;
+    align-items: center;
   }
 }
 
@@ -90,34 +111,37 @@
 .footer-container__social {
   display: block;
   width: 206px;
-  margin-left: 70px;
-  @media screen and (max-width: 1199px) {
-    align-items: center;
+  align-items: center;
+  @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;
+    align-self: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+  margin-left: 70px;
   }
 }
 
 .footer-container__title {
+  display: block;
   margin-bottom: 20px;
   @include font(700, 14px, 1.1, 0.03em);
   text-transform: uppercase;
   color: var(--secundary-text);
   @media screen and (max-width: 1199px) {
     text-align: center;
-    margin-top: 60px;
   }
   @media screen and (min-width: 1200px) {
     text-align: left;
   }}
 
 .footer-list-social {
-  @media screen and (max-width: 1199px) {
-  display: flex;
+  display: flex; 
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-}}
+}
 
 .link-icon-footer {
   margin-top: 0;
@@ -134,12 +158,18 @@
 
 .footer-container__form {
   display: block;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
   align-items: center;
-  width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center;
   }
   @media screen and (min-width: 1200px) {
-    width: 570;
+    display: block;
+    align-items: center;
     margin-right: 0;
     margin-left: auto;
   }

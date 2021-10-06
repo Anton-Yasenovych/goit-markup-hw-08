@@ -55,6 +55,7 @@
       flex-wrap: wrap;
       margin-top: -30px;
       margin-left: -30px;
+      list-style: none;
   }  
  & > .gallery-item-card {
   width: 100%;
@@ -116,11 +117,13 @@
 }
 
 .gallery-card-set {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  height: 440px;
   width: 404px;
-  display: block;
-  align-items: center;
   align-self: center;
-  width: 100%;
+ width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -128,26 +131,27 @@
   &:focus {
     box-shadow: var(--box-shadow-card-gallery);
   }
-}
+  .gallery-card__label {
+    flex-grow: 1;
+    background: var(--secundary-text);
+    padding-top: var(--card-text-gal-pad-top);
+    padding-right: var(--card-text-gal-pad-lft);
+    padding-bottom: var(--card-text-gal-pad-top);
+    padding-left: var(--card-text-gal-pad-lft);
+  }}
 
-.gallery-card__label {
-  background: var(--secundary-text);
-  padding-top: var(--card-text-gal-pad-top);
-  padding-right: var(--card-text-gal-pad-lft);
-  padding-bottom: var(--card-text-gal-pad-top);
-  padding-left: var(--card-text-gal-pad-lft);
-}
-
-.title-card {
-  @include font(700, 18px, 2, 0.06em);
-  color: var(--main-title-color);
+.title-card { 
+  margin: 0;
+ @include font(700, 18px, 2, 0.06em);
+ color: var(--main-title-color);
 }
 
 .description-card {
-  margin-top: 4px;
-  @include font(400, 16px, 2.2);
-  color: var(--main-text-color);
+ margin-top: 4px;
+ @include font(400, 16px, 2.2);
+ color: var(--main-text-color);
 }
+
 
 .default {
   color: var(--secundary-text);
