@@ -49,15 +49,16 @@ margin-top: 30px;
   height: 70px; 
 }
 .advantages-title {
-  text-align: center;
-  text-align: center;
   text-transform: uppercase;
   color: var( --main-title-color);
   margin-top: 30px;
   @include font (700, 14px, 1.1);
   @media screen and (max-width: 319px) {
     margin-top: 15px;
-    @include font (700, 10px, 1.1);
+  @include font (700, 10px, 1.1);
+  }
+  @media screen and (max-width: 767px) {
+    text-align: center;
   }
 }
 .advantages-text {

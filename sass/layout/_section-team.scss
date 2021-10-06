@@ -64,16 +64,10 @@
   align-items: center;
   display: block;
 @media screen and (max-width:1199px){
-  padding-top: 30px;
-  padding-left: auto;
-  padding-bottom: 24px;
-  padding-right: auto;
+  @include padding(30px, 24px, 74px, 74px);
 }
-  @media screen and (min-width:1200px){
-  padding-top: 30px;
-  padding-left: auto;
-  padding-bottom: 30px;
-  padding-right: auto;
+@media screen and (min-width:1200px){
+ @include padding(30px, 30px, 32px, 32px);
 }}
 
 .card-set__title-name {

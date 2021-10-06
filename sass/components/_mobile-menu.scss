@@ -28,9 +28,12 @@
   }
   
   .menu-toggle {
+    position: absolute;
+    top: 20px; 
+    right: 0;
     min-height: 40px;
     min-width: 40px;
-    display: block;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -44,7 +47,7 @@
         display: none;
       }
   }   
-  
+
   .menu-toggle-cross {
     position: absolute;
     top: 15px;
@@ -165,16 +168,20 @@ bottom: 40px;
    }}
 
   .overlay-list-social {
-    display: flex;
+    display: inline-block;
     align-items: center;
- 
-  }
+  } 
   
+  .list-social__item {
+    display: inline-block;
+  }
+
   .list-social__item:not(:last-child) {
     margin-right: 10px;
   }
 
 .list-social__link {
+  display: inline-block;
   @include font(500, 18px, 1.2, 0.02em);   
   color: var(--accent-color);
 }

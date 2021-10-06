@@ -16,7 +16,6 @@
 .footer-container-adress-social {
   @media screen and (min-width: 768px) {
     display: flex;
-  
     justify-content: space-around;
     align-items: baseline;    
     margin-bottom: 60px;
@@ -24,6 +23,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     margin: 0;
+    align-self: baseline;
   }
 }
 
@@ -168,10 +168,11 @@
     align-self: center;
   }
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: inline-block;
     align-items: center;
     margin-right: 0;
     margin-left: auto;
+    align-self: baseline;
   }
 }
 
