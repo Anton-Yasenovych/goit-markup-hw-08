@@ -2455,7 +2455,7 @@ menu-toggle
 .menu-toggle-cross {
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 20px;
   min-height: 40px;
   min-width: 40px;
   display: block;
